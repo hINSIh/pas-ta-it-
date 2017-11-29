@@ -8,6 +8,8 @@ public class MemoVO {
 	private String filePath;
 	private String color;
 
+	public MemoVo(){}
+	
 	public int getMemoNo() {
 		return memoNo;
 	}

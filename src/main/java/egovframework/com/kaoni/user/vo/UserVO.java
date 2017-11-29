@@ -5,7 +5,7 @@ public class UserVO {
 	private String userId;
 	private String userPassword;
 	private String userName;
-
+	
 	public int getUserNo() {
 		return userNo;
 	}
