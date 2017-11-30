@@ -1,5 +1,7 @@
 package com.kaoni.it.memo.vo;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class MemoVO {
 	private int memoNo;
 	private int tabNo;
@@ -7,6 +9,8 @@ public class MemoVO {
 	private String content;
 	private String filePath;
 	private String color;
+	private int memoX;
+	private int memoY;
 
 	public int getMemoNo() {
 		return memoNo;
@@ -54,6 +58,23 @@ public class MemoVO {
 
 	public void setColor(String color) {
 		this.color = color;
+	}
+	
+
+	public int getMemoX() {
+		return memoX;
+	}
+
+	public void setMemoX(int memoX) {
+		this.memoX = memoX;
+	}
+
+	public int getMemoY() {
+		return memoY;
+	}
+
+	public void setMemoY(int memoY) {
+		this.memoY = memoY;
 	}
 
 	@Override

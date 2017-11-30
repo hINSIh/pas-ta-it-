@@ -25,7 +25,7 @@
 	</insert>
 
 
-	<select id="userSelect" resultType="UserVO">
+	<select id="userSelect" resultType="com.kaoni.it.user.vo.UserVO">
 	<![CDATA[
 		SELECT * from user 
 		where user_no=#{user_no}

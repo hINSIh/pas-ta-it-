@@ -8,7 +8,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 
-	public String loginUrl;
+	/*public String loginUrl;
 
 	public void setLoginUrl(String loginUrl) {
 		this.loginUrl = loginUrl;
@@ -34,5 +34,5 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		}
 
 		return true;
-	}
+	}*/
 }

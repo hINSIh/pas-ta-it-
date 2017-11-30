@@ -25,8 +25,8 @@
 	</beans:bean>
 
 	<context:component-scan base-package="com.kaoni.it" />
-
-	<!-- Login Interceptor -->
+	
+<!-- Login Interceptor 
 	<beans:bean id="loginInterceptor"
 		class="com.kaoni.it.interceptor.LoginInterceptor">
 		<beans:property name="loginUrl" value="/login" />
@@ -37,5 +37,5 @@
 			<mapping path="/*" />
 			<beans:ref bean="loginInterceptor" />
 		</interceptor>
-	</interceptors>
+	</interceptors> -->
 </beans:beans>

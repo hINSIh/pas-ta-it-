@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memo">
+
+	<insert id="memoCreate" parameterType="com.kaoni.it.memo.vo.MemoVO">
+	<![CDATA[
+		insert into memo (tab_no, user_no, content, color, memo_x, memo_y)
+		values (#{tabNo}, #{userNo}, #{content}, #{color}, #{memoX}, #{memoY} )
+	]]>
+	</insert>
+
+	<delete id="memoDelete">
+	<![CDATA[
+		delete from memo where memo_no = #{memoNo} 
+	]]>
+	</delete>
+	
+	<update id="memoUpdate">
+	<![CDATA[
+		update memo set content = #{content}, memo_x = #{memoX}, memo_y = #{memoY}
+	]]>
+	</update>
+	
+	<select id="memoSelect" resultType="com.kaoni.it.memo.vo.MemoVO">
+	<![CDATA[
+		SELECT memo_no as memoNo,tab_no, user_no, content, color from memo 
+		where tab_no=#{tabNo} and user_no=#{userNo} order by memo_no desc limit 0,1
+	]]>
+	</select>
+
+	<select id="memoList" resultType="com.kaoni.it.memo.vo.MemoVO">
+	<![CDATA[
+		SELECT * from memo 
+		where tab_no=#{tabNo}
+	]]>
+	</select>
+</mapper> 

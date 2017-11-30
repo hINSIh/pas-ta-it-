@@ -1,4 +1,5 @@
 @CHARSET "UTF-8";
+
 *{
 	margin:0 auto;
 	padding:0;
@@ -23,6 +24,15 @@ body{
 	float:left;
 	padding:5px 0 5px 0;
 	margin:0;
+}
+/*프로젝트 이름 수정 input*/
+.proNameInput{
+	background:none;
+	border:none;
+	color:#ccc;
+	outline:none;
+	text-align:left;
+	
 }
 
 .proExplain{
@@ -53,32 +63,74 @@ body{
 
 .nav-tabs li{
 	width:100px;
+	height:45px;
 	text-align:center;
 	border-radius: 15px 15px 0 0;
 	margin-right:5px;
 	font-size:1.2em;
-}
-.nav>li>a:focus{
-	background:none;
-	outline:none;
-}
-.nav-tabs>li>a:hover{
-	background:coral;
-	border-radius: 15px 15px 0 0;
-	margin:0;
-	border: 1px solid transparent;
+	line-height: 45px;
+	cursor:pointer;
 }
 .nav-tabs li:not(.tabActive){
 	background:pink;
+}
+.nav-tabs li:not(.tabActive):hover {
+	background:coral;
 }
 .tabActive{
 	background:hotpink;
 }
 
+/*
+	포스티잇 판
+*/
 .projectContent{
-	background:lightcoral;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	position:relative;
+}
+.projectContent .postPlus{
+	position:absolute;
+	right:10px;
+	top:10px;
+	cursor:pointer;
+	font-size:1.2em;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background:pink;
+	text-align:center;
+	line-height:50px;
+	z-index:44;
+}
+.projectContent .postPlus i{
+	color:white;
+	padding:3px;
 	box-sizing:border-box;
 }
+
+/*postit*/
+.postitDelete{
+	width:100%;
+	height:30px;
+	background:rgba(255,255,255,0.3);
+	text-align":right;
+	line-height:30px;
+}
+.postitDelete span{
+	padding-right:10px;
+	cursor:pointer;
+}
+.postit textarea{
+	width:100%;
+	height:220px;
+	border:none;
+	background:none;
+	outline:none;
+	box-sizing:border-box;
+	padding:10px;
+}
+
 
 
 .navMenu{
